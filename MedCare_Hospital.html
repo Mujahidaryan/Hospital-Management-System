@@ -1,0 +1,127 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityCare Hospital</title>
+    <style>
+      body  {
+         font-family: Arial, sans-serif;
+         margin: 0;
+         padding: 0;
+      }
+      header  {
+         background-color: #0077b6;
+         color: white;
+         padding: 20px;
+         text-align: center;
+      }
+      nav  {
+         background-color: #023e8a;
+         padding: 10px 0;
+      }
+      nav ul  {
+         list-style-type: none;
+         margin: 0;
+         padding: 0;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         gap: 30px;
+      }
+      nav ul li  {
+         margin: 0 15px;
+      }
+      nav ul li a  {
+         color: white;
+         text-decoration: none;
+         font-weight: bold;
+         padding: 8px 12px;
+         transition: background-color 0.3s, color 0.3s;
+      }
+      nav ul li a:hover  {
+         background-color: #0077b6;
+         border-radius: 4px;
+         color: #fff;
+      }
+      section  {
+         padding: 20px;
+      }
+      footer  {
+         background-color: #0077b6;
+         color: white;
+         text-align: center;
+         padding: 15px;
+         position: relative;
+         bottom: 0;
+         width: 100%;
+      }
+      .doctors {
+         display: flex;
+         flex-wrap: wrap;
+         gap : 20px;
+      }
+      .doctor-card {
+         border: 1px solid #ccc;
+         padding: 15px;
+         width: 200px;
+      }
+      form  {
+         margin-top: 20px;
+      }
+      input, textarea {
+         display: block;
+         width: 100%;
+         margin: 10px 0;
+         padding: 8px;
+      }
+    </style>
+</head>
+<body>
+ <header>
+    <h1>CityCare Hospital</h1>
+    <p>Your Health, Our Priority</p>
+ </header>
+    <nav>
+      <ul>
+        <li><a href="CityCare_Hospital.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="doctors.html">Doctors</a></li>
+        <li><a href="Appointments.html">Appointments</a></li>
+      </ul>
+    </nav>
+ 
+ <section>
+    <h2>Welcome to City Hospital</h2>
+    <h3>Providing quality healthcare with compassion and excellence.</h3>
+    <p>We offer top-notch medical care with latest technology and highly qualified doctors.</p>
+ 
+    <h2>Our Doctors</h2>
+   <div class="doctor-card">
+      <h4>Dr. Ayesha Khan</h4>
+      <p>Cardioloigist</p>
+   </div>
+   <div class="doctor-card">
+      <h4>Dr. Ali Raza</h4>
+      <p>Orthopedic Surgeon</p>
+   </div>
+   <div class="doctor-card">
+      <h4>Dr. Sana Iqbal</h4>
+      <p>Dermatologist</p>
+   </div>
+<h3>Contact Us</h3>
+<form action="">
+   <label for="name">Name:</label>
+   <input type="text" id="name" placeholder="Your Name">
+   <label for="email">Email</label>
+   <input type="email" id="email" placeholder="Your Email">
+   <label for="message">Message:</label>
+   <textarea id="message" rows="4" placeholder="Type your inquiry/Message here"></textarea>
+   <button type="submit">submit</button>
+</form>
+</section>
+<footer>
+   <p>&copy; 2025 CityCare Hospital. All rights reserved</p>
+</footer>
+</body>
+</html>

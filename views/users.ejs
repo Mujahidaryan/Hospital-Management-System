@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>All Users</title>
+</head>
+<body>
+  <h1>User List</h1>
+
+  <a href="/users/create">+ Create New User</a>
+
+  <table border="1" cellpadding="10">
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Actions</th>
+    </tr>
+    <% users.forEach(user => { %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.age %></td>
+        <td>
+          <form action="/users/<%= user._id %>?_method=DELETE" method="POST" style="display:inline;">
+            <button type="submit">Delete</button>
+          </form>
+        </td>
+      </tr>
+    <% }) %>
+  </table>
+</body>
+</html>

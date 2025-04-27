@@ -1,0 +1,21 @@
+<form action="/users" method="POST" onsubmit="return validateForm()">
+    <input type="text" name="name" id="name" placeholder="Name" />
+    <input type="number" name="age" id="age" placeholder="Age" />
+    <button type="submit">Add User</button>
+  </form>
+  
+  <script>
+    function validateForm() {
+      const name = document.getElementById("name").value.trim();
+      const age = document.getElementById("age").value.trim();
+      if (!name || !age) {
+        alert("Please fill out both name and age.");
+        return false;
+      }
+      return true;
+    }
+    req.flash("success_msg", "User added successfully!");
+    res.redirect("/users");
+  </script>
+
+  

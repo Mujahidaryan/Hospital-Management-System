@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Appointment | CityCare Hospital</title>
+  <link rel="stylesheet" href="C:\Users\Aryan\Desktop\My Web Projects\Full_Stack_WebProject\public\styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">CityCare Hospital</div>
+    <nav>
+      <ul class="navbar">
+        <li><a href="MedCare_Hospital.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="doctors.html">Doctors</a></li>
+        <li><a href="appointments.html" class="active">Appointments</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h1>Book an Appointment</h1>
+    <form class="appointment-form" action="#" method="POST">
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" required>
+
+      <label for="doctor">Select Doctor:</label>
+      <select id="doctor" name="doctor">
+        <option>Dr. Sara Ali (Cardiologist)</option>
+        <option>Dr. Usman Raza (Orthopedic)</option>
+      </select>
+
+      <label for="date">Preferred Date:</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="message">Symptoms / Concern:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit">Book Now</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CityCare Hospital. All rights reserved.</p>
+  </footer>
+</body>
+</html>

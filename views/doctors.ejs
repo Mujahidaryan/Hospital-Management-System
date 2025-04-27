@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doctors</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-6">Doctors</h1>
+    <form action="/doctors" method="POST" class="mb-8 space-y-4">
+      <input name="name" placeholder="Name" class="p-2 border w-full" required>
+      <input name="specialty" placeholder="Specialty" class="p-2 border w-full" required>
+      <input name="experience" placeholder="Experience (years)" class="p-2 border w-full" required type="number">
+      <input name="image" placeholder="Image URL" class="p-2 border w-full">
+      <button type="submit" class="bg-blue-500 text-white px-4 py-2">Add Doctor</button>
+    </form>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <% doctors.forEach(doctor => { %>
+        <div class="bg-white p-4 rounded shadow">
+          <img src="<%= doctor.image %>" alt="Doctor" class="w-full h-48 object-cover rounded mb-4" />
+          <h2 class="text-xl font-semibold"><%= doctor.name %></h2>
+          <p><%= doctor.specialty %></p>
+          <p><%= doctor.experience %> years experience</p>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+</body>
+</html>

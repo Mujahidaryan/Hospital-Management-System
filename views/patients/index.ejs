@@ -1,0 +1,89 @@
+<!-- views/patients/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Home</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Add this STYLE TAG for slideshow animation inside <head> -->
+  <style>
+    @keyframes slide {
+      0%, 20% { transform: translateX(0%); }
+      25%, 45% { transform: translateX(-100%); }
+      50%, 70% { transform: translateX(-200%); }
+      75%, 95% { transform: translateX(-300%); }
+      100% { transform: translateX(0%); }
+    }
+    .animate-slide {
+      display: flex;
+      width: 400%;
+      animation: slide 20s infinite;
+    }
+    .slide-img {
+      width: 100%;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100">
+
+  <!-- Slideshow -->
+  <div class="relative w-full h-64 md:h-96 overflow-hidden">
+    <div class="absolute inset-0 animate-slide">
+      <img src="/images/slide1.jpg" class="slide-img object-cover h-full" alt="Slide 1">
+      <img src="/images/slide2.jpg" class="slide-img object-cover h-full" alt="Slide 2">
+      <img src="/images/slide3.jpg" class="slide-img object-cover h-full" alt="Slide 3">
+      <img src="/images/slide4.jpg" class="slide-img object-cover h-full" alt="Slide 4">
+    </div>
+  </div>
+
+  <!-- Doctors Section -->
+  <section class="py-12 px-6 max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold mb-8 text-center text-blue-700">Our Doctors</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+      <!-- Doctor Card 1 -->
+      <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-24 h-24 rounded-full mb-4" alt="Doctor 1">
+        <h3 class="text-lg font-semibold">Dr. John Doe</h3>
+        <p class="text-sm text-gray-500">Cardiologist</p>
+      </div>
+
+      <!-- Doctor Card 2 -->
+      <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-24 h-24 rounded-full mb-4" alt="Doctor 2">
+        <h3 class="text-lg font-semibold">Dr. Sarah Lee</h3>
+        <p class="text-sm text-gray-500">Neurologist</p>
+      </div>
+
+      <!-- Doctor Card 3 -->
+      <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
+        <img src="https://randomuser.me/api/portraits/men/54.jpg" class="w-24 h-24 rounded-full mb-4" alt="Doctor 3">
+        <h3 class="text-lg font-semibold">Dr. Alex Smith</h3>
+        <p class="text-sm text-gray-500">Pediatrician</p>
+      </div>
+
+      <!-- Doctor Card 4 -->
+      <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
+        <img src="https://randomuser.me/api/portraits/women/66.jpg" class="w-24 h-24 rounded-full mb-4" alt="Doctor 4">
+        <h3 class="text-lg font-semibold">Dr. Emma Brown</h3>
+        <p class="text-sm text-gray-500">Orthopedic Surgeon</p>
+      </div>
+
+      <!-- Doctor Card 5 -->
+      <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
+        <img src="https://randomuser.me/api/portraits/men/77.jpg" class="w-24 h-24 rounded-full mb-4" alt="Doctor 5">
+        <h3 class="text-lg font-semibold">Dr. Michael Scott</h3>
+        <p class="text-sm text-gray-500">Dermatologist</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
